@@ -24,11 +24,15 @@ function Layout(props) {
     </div>
 }
 
+function Person(props) {
+    return <li>{props.person}</li>
+}
+
 function App() {
     const people = ['John', 'Dave', 'Jane'];
 
     return (<ul>
-        {people.map((person) => <li>{person}</li>)}
+        {people.map((person, i) => <Person key={i} person={person} />)}
     </ul>)
 }
 
