@@ -9,4 +9,15 @@ function Header(props) {
     return <h1>Hello {props.username}</h1>;
 }
 
-ReactDOM.render(<Header username="Auto" />, rootNode)
+
+function Layout(props) {
+    return <div style={{ background: 'palegoldenrod' }}>
+        {props.children}
+    </div>
+}
+
+ReactDOM.render(<Layout>
+    <Header username="Auto">
+        <footer>Copyright 2022</footer>
+    </Header>
+</Layout>, rootNode)
