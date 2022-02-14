@@ -25,6 +25,6 @@ function Layout(props) {
 }
 
 ReactDOM.render(<Layout>
-    {isAuthenticated ? <React.Fragment><Header username="Auto" /> <Logout /></React.Fragment> : <Login />}
+    {isAuthenticated ? <><Header username="Auto" /> <Logout /></> : <Login />}
     <footer>Copyright 2022</footer>
 </Layout>, rootNode)
