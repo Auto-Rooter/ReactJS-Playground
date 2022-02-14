@@ -1,16 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const greeting = <div>Hello React</div>;
-const isReactUser = true;
+const year = 2022;
+const greeting = <div>Hello React in {year}</div>;
 const rootNode = document.getElementById('root');
 
-function sayGreating() {
-    if (isReactUser) {
-        return greeting;
-    } else {
-        return <div> Hello Javascript</div>;
-    }
-}
 
-ReactDOM.render(sayGreating(), rootNode)
+ReactDOM.render(greeting, rootNode)
