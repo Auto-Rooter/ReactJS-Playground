@@ -24,7 +24,12 @@ function Layout(props) {
     </div>
 }
 
-ReactDOM.render(<Layout>
-    {isAuthenticated ? <><Header username="Auto" /> <Logout /></> : <Login />}
-    <footer>Copyright 2022</footer>
-</Layout>, rootNode)
+function App() {
+    const people = ['John', 'Dave', 'Jane'];
+
+    return (<ul>
+        {people.map((person) => <li>{person}</li>)}
+    </ul>)
+}
+
+ReactDOM.render(<App />, rootNode) 
